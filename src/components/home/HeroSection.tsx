@@ -1,7 +1,15 @@
  import { Link } from "react-router-dom";
- import { ArrowRight, Building2, Users } from "lucide-react";
+import { ArrowRight, Building2, Users, Globe, Heart, Flag, Shield, Landmark } from "lucide-react";
  import { Button } from "@/components/ui/button";
  
+const trustBadges = [
+  { icon: Globe, name: "Organisations Internationales" },
+  { icon: Heart, name: "ONG Humanitaires" },
+  { icon: Flag, name: "Corps Diplomatiques" },
+  { icon: Shield, name: "Agences de Sécurité" },
+  { icon: Landmark, name: "Institutions Financières" },
+];
+
  const HeroSection = () => {
    return (
      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -54,12 +62,20 @@
            {/* Trust badges */}
            <div className="mt-16 pt-8 border-t border-border/50 animate-fade-in" style={{ animationDelay: "0.4s" }}>
              <p className="text-sm text-muted-foreground mb-4">Ils nous font confiance</p>
-             <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-               <span className="font-display text-lg">ONU</span>
-               <span className="font-display text-lg">Croix-Rouge</span>
-               <span className="font-display text-lg">Ambassade FR</span>
-               <span className="font-display text-lg">MSF</span>
-               <span className="font-display text-lg">UNICEF</span>
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+              {trustBadges.map((badge) => (
+                <div
+                  key={badge.name}
+                  className="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity group"
+                >
+                  <div className="w-14 h-14 rounded-xl bg-muted/50 border border-border flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-colors">
+                    <badge.icon className="w-7 h-7 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
+                  <span className="text-xs text-muted-foreground text-center max-w-[100px] leading-tight">
+                    {badge.name}
+                  </span>
+                </div>
+              ))}
              </div>
            </div>
          </div>
