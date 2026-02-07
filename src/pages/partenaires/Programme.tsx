@@ -1,17 +1,19 @@
  import Layout from "@/components/layout/Layout";
  import { Link } from "react-router-dom";
- import { 
-   ArrowRight, 
-   TrendingUp, 
-   Users, 
-   Shield, 
-   Award, 
-   Banknote, 
-   Headphones,
-   CheckCircle,
-   Car
- } from "lucide-react";
- import { Button } from "@/components/ui/button";
+import { 
+    ArrowRight, 
+    TrendingUp, 
+    Users, 
+    Shield, 
+    Award, 
+    Banknote, 
+    Headphones,
+    CheckCircle,
+    Car,
+    BookOpen
+  } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
  
  const benefits = [
    {
@@ -198,12 +200,38 @@
          </div>
        </section>
  
-       {/* CTA Section */}
-       <section className="py-20 bg-gradient-to-b from-primary/5 to-transparent">
-         <div className="container mx-auto px-4 text-center">
-           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-             Prêt à rejoindre le réseau ?
-           </h2>
+        {/* Livre Blanc Banner */}
+        <section className="py-10">
+          <div className="container mx-auto px-4">
+            <Link
+              to="/livre-blanc?vue=partenaire"
+              className="block bg-card border border-primary/20 rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all group"
+            >
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                  <Badge variant="outline" className="border-primary/50 text-primary mb-3">
+                    <BookOpen className="w-3.5 h-3.5 mr-1.5" />
+                    Livre Blanc 2026
+                  </Badge>
+                  <h3 className="font-display text-xl font-bold">
+                    Comprendre le modèle FlowRide en détail
+                  </h3>
+                  <p className="text-muted-foreground text-sm mt-1">
+                    Modèle économique, partage de revenus, études de cas partenaires et vision de croissance.
+                  </p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+              </div>
+            </Link>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-b from-primary/5 to-transparent">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
+              Prêt à rejoindre le réseau ?
+            </h2>
            <p className="text-muted-foreground max-w-xl mx-auto mb-10">
              Soumettez votre candidature dès maintenant et notre équipe vous contactera 
              sous 48h pour discuter de votre intégration.

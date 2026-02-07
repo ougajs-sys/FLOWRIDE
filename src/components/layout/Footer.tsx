@@ -20,44 +20,54 @@
              </p>
            </div>
  
-           {/* Clients */}
-           <div>
-             <h4 className="font-display text-lg font-semibold mb-4">Clients</h4>
-             <ul className="space-y-2">
-               <li>
-                 <Link to="/clients/offres" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                   Nos Offres
-                 </Link>
-               </li>
-               <li>
-                 <Link to="/clients/vehicules" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                   Catalogue Véhicules
-                 </Link>
-               </li>
-               <li>
-                 <Link to="/clients/devis" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                   Demande de Devis
-                 </Link>
-               </li>
-             </ul>
-           </div>
- 
-           {/* Partenaires */}
-           <div>
-             <h4 className="font-display text-lg font-semibold mb-4">Partenaires</h4>
-             <ul className="space-y-2">
-               <li>
-                 <Link to="/partenaires/programme" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                   Programme Partenaire
-                 </Link>
-               </li>
-               <li>
-                 <Link to="/partenaires/rejoindre" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                   Devenir Partenaire
-                 </Link>
-               </li>
-             </ul>
-           </div>
+            {/* Clients */}
+            <div>
+              <h4 className="font-display text-lg font-semibold mb-4">Clients</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/clients/offres" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Nos Offres
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/clients/vehicules" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Catalogue Véhicules
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/clients/devis" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Demande de Devis
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/livre-blanc?vue=client" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Livre Blanc
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Partenaires */}
+            <div>
+              <h4 className="font-display text-lg font-semibold mb-4">Partenaires</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/partenaires/programme" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Programme Partenaire
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/partenaires/rejoindre" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Devenir Partenaire
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/livre-blanc?vue=partenaire" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Livre Blanc
+                  </Link>
+                </li>
+              </ul>
+            </div>
  
            {/* Contact */}
            <div>
