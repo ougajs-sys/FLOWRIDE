@@ -1,7 +1,8 @@
  import Layout from "@/components/layout/Layout";
  import { Link } from "react-router-dom";
- import { ArrowRight, Zap, Calendar, Crown, Check, Phone } from "lucide-react";
- import { Button } from "@/components/ui/button";
+import { ArrowRight, Zap, Calendar, Crown, Check, Phone, BookOpen } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
  
  const offers = [
    {
@@ -223,12 +224,38 @@
          </div>
        </section>
  
-       {/* Contact Section */}
-       <section className="py-16 bg-muted/30">
-         <div className="container mx-auto px-4 text-center">
-           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
-             Besoin d'une offre <span className="text-gradient-gold">sur mesure</span> ?
-           </h2>
+        {/* Livre Blanc Banner */}
+        <section className="py-10">
+          <div className="container mx-auto px-4">
+            <Link
+              to="/livre-blanc?vue=client"
+              className="block bg-card border border-primary/20 rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all group"
+            >
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                  <Badge variant="outline" className="border-primary/50 text-primary mb-3">
+                    <BookOpen className="w-3.5 h-3.5 mr-1.5" />
+                    Livre Blanc 2026
+                  </Badge>
+                  <h3 className="font-display text-xl font-bold">
+                    Découvrez notre vision complète de la mobilité B2B
+                  </h3>
+                  <p className="text-muted-foreground text-sm mt-1">
+                    Piliers qualité, études de cas, garanties et feuille de route — tout ce qu'il faut savoir.
+                  </p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+              </div>
+            </Link>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
+              Besoin d'une offre <span className="text-gradient-gold">sur mesure</span> ?
+            </h2>
            <p className="text-muted-foreground max-w-xl mx-auto mb-8">
              Notre équipe commerciale est à votre disposition pour étudier vos besoins 
              spécifiques et vous proposer une solution adaptée.
